@@ -3,7 +3,11 @@ from test_framework import generic_test
 
 
 def swap_bits(x, i, j):
-    """Takes a 64-bit integer and swaps the bits at indices i and j"""
+    """
+    Takes a 64-bit integer and swaps the bits at indices i and j
+
+    Algo takes O(1) time complexity independent of word size
+    """
     # Extract the i-th annd j-th bit by bitwise right shifting
     # with a value of i and j repectively and return that value
     # by bitwise & with 1
@@ -16,7 +20,6 @@ def swap_bits(x, i, j):
         # XOR x and bit_mask to switch bits at indices i and j
         x ^= bit_mask
     return x
-
 
 if __name__ == '__main__':
     exit(
