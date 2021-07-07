@@ -5,16 +5,19 @@ def power(x: float, y: int) -> float:
     # this next approach we use recursion and divide and conquer strategy
     # this time complexity run time is O(log(n))
     #
-    if y == 0: return 1 # power of 0 result is 1
-    if y == 1: return x # power of 1 result is x
+    if y == 0:
+        return 1 # power of 0 result is 1
+    if y == 1:
+        return x # power of 1 result is x
     # define temp result by recursively calling power with y/2
     temp = power(x, int(y / 2))
 
     if y % 2 == 0: # if y is even
         return temp * temp
     else: # if y is odd
-        if y > 0: return x * temp * temp
-        else: return (temp * temp) / x # if y is odd and negative
+        if y > 0:
+            return x * temp * temp
+        return (temp * temp) / x # if y is odd and negative
 
 
     # a brute force approach is to multiply x y times
