@@ -6,6 +6,7 @@ Note that if the input is negative, then its representation as a decimal
 string cannot be palindromic, since it begins with -
 """
 import math # first import math for approach 2
+
 from test_framework import generic_test
 
 def is_palindrome_number(x: int) -> bool:
