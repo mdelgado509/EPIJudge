@@ -8,8 +8,14 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def even_odd(A: List[int]) -> None:
-    # TODO - you fill in here.
-    return
+    next_even, next_odd = 0, len(A) - 1 # pointers for beginning and end
+    while next_even < next_odd: # loop until pointers meet
+        if A[next_even] % 2 == 0: # if value at beginning is even
+            next_even += 1 # move the beginning pointer over
+        else:
+            # otherwise flip the values of beginning and end list elements
+            A[next_even], A[next_odd] = A[next_odd], A[next_even]
+            next_odd -= 1 # decrement the end pointer and test new value
 
 
 @enable_executor_hook
